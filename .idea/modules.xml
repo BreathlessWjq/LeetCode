@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/arithmetic-code/arithmetic-code.iml" filepath="$PROJECT_DIR$/arithmetic-code/arithmetic-code.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day01-rotate-code/day01-rotate-code.iml" filepath="$PROJECT_DIR$/day01-rotate-code/day01-rotate-code.iml" />
+    </modules>
+  </component>
+</project>
