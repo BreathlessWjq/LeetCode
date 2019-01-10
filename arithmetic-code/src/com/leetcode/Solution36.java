@@ -69,19 +69,25 @@ public class Solution36 {
         System.out.println(lt.isValidSudoku(board));
     }
 
+    /**/
     public boolean isValidSudoku(char[][] board) {
         for (int i = 0; i < board.length; i++) {
             HashSet<Character> row = new HashSet<>();
             HashSet<Character> column = new HashSet<>();
             HashSet<Character> cube = new HashSet<>();
             for (int j = 0; j < board[i].length; j++) {
+                /*验证每行是否出现重复数字*/
                 if (board[i][j] != '.' && !row.add(board[i][j])) {
                     return false;
                 }
+                /*验证每列是否出现重复数字*/
                 if (board[j][i] != '.' && !column.add(board[j][i])) {
                     return false;
                 }
+                /*验证小九宫格是否出现重复数字*/
+                /*行号+偏移量*/
                 int rowIndex = 3 * (i / 3) + j / 3;
+                /*列号+偏移量*/
                 int columnIndex = 3 * (i % 3) + j % 3;
                 if (board[rowIndex][columnIndex] != '.' && !cube.add(board[rowIndex][columnIndex])) {
                     return false;
